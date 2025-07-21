@@ -15,7 +15,7 @@
 body {
   background-color: white;
   color: #4B0082; /* dark purple */
-  font-family: "ThandoFont1", sans-serif;
+  font-family: "ThandoFont2", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -23,16 +23,20 @@ body {
 header {
   text-align: center;
   padding: 2rem;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 2px solid #4B0082;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 h1 {
   font-family: "ThandoFont2", serif;
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  border-bottom: 2px solid #4B0082;
 }
 
 .banner ul {
+  font-family: "ThandoFont1", serif;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -51,4 +55,38 @@ h1 {
 
 .banner a:hover {
   text-decoration: underline;
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.intro {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap; /* Makes it responsive on smaller screens */
+}
+
+.intro p {
+  margin-bottom: 1rem;
+}
+
+.intro-text {
+  flex: 1 1 60%;
+  color: black;
+}
+
+.portrait {
+  max-width: 200px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
 }
