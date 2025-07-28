@@ -55,5 +55,21 @@
   </section>
 </main>
   <script src="script.js"></script>
+  <div id="newsletter-popup" class="popup">
+    <!-- Newsletter Sign-Up Popup -->
+    <div class="popup" id="newsletterPopup" style="display: none;">
+      <form action="https://docs.google.com/forms/d/e/1FAIpQLSeemfIEUdHeryLfnafKfnW6x1FF503gQZcFtkHhbk26Os9ulA/formResponse" method="POST" target="_blank">
+        <label for="email">Sign up for my newsletter:</label><br>
+        <input type="email" name="entry.XXXXX" id="email" required placeholder="Your email" />
+        <button type="submit">Subscribe</button>
+      </form>
+      <button onclick="document.getElementById('newsletterPopup').style.display='none';">Close</button>
+    </div>
+
+  </div>
+
+  <button onclick="document.getElementById('newsletterPopup').style.display='block';">
+    Join the Newsletter
+  </button>
 </body>
 </html>
