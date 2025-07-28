@@ -2,24 +2,19 @@
 console.log("Welcome to Thando Khumalo’s site!");
 
 
-window.addEventListener("load", function () {
-  const popup = document.getElementById("newsletter-popup");
-  const closeBtn = document.querySelector(".close-btn");
+function openPopup() {
+    document.getElementById("newsletter-popup").style.display = "block";
+  }
 
-  // Show popup after delay (e.g., 5 seconds)
-  setTimeout(() => {
-    popup.style.display = "block";
-  }, 5000);
+  function closePopup() {
+    document.getElementById("newsletter-popup").style.display = "none";
+  }
 
-  // Close popup on X click
-  closeBtn.addEventListener("click", () => {
-    popup.style.display = "none";
-  });
-
-  // Optional: Close popup when clicking outside content
-  window.addEventListener("click", (e) => {
-    if (e.target === popup) {
+  // Optional: clicking outside the popup-content closes it
+  window.onclick = function(event) {
+    const popup = document.getElementById("newsletter-popup");
+    const content = document.querySelector(".popup-content");
+    if (event.target === popup) {
       popup.style.display = "none";
     }
-  });
-});
+  };
